@@ -12,13 +12,13 @@
     <title>Weather Beam</title>
 </head>
 
-<body>
+<body class="flex-column min-100-vh">
     <header id="header">
         Weather Dashboard
     </header>
     <main class="flex-row justify-space-between">
-        <section class="search-box">
-            <div class="card col-12 col-md-4">
+        <div class="col-12 col-md-4">
+            <div class="card">
                 <h3 class="card-header text-uppercase">Search For a City:</h3>
                 <form id="weather-search" class="card-body">
                     <input name="search" id="search" type="text" placeholder="Search for a City" autofocus="true"
@@ -27,17 +27,65 @@
                     <span class="msg"></span>
                 </form>
             </div>
-        </section>
-        <section class="display-search flex-row card border-dark mb-3" style="max-width: 18rem;">
-            <div class="col-12 col-md-8">
-                <h2 class="card-header">Today's Weather <span id="weather-search-term"></span></h2>
-                <div id="weather-container" class="card-text"></div>
+            <div class="card">
+                <h3 class="card-header recent-searches">Recent Searches</h3>
+                <div class="card-body">
+                    <a class="list-item flex-row justify-space-between align-center" href="/">Boynton Beach</a>
+                    <a class="list-item flex-row justify-space-between align-center" href="/">Boca Raton</a>
+                    <a class="list-item flex-row justify-space-between align-center" href="/">Delray Beach</a>
+                </div>
             </div>
-        </section>
-        <section>
-            <div class="forecast-box"></div>
-        </section>
-        
+        </div>
+
+        <div class="col-12 col-md-8">
+            <div class="border">
+                <h2>Boynton Beach <span id="weather-search-term"></span></h2>
+                <div id="weather-container" class="list-group"> 
+                    <p> Temp: 73.72 ℉ </p>
+                    <p> Wind: 9.53 MPH</p>
+                    <p> Humidity: 66% </p></div>
+            </div>
+            <div class="forecast-box">
+                <h5>5-Day Forecast:</h5>
+                <div class="container">
+                    <div class="row">
+                        <div class="forecast-container col-3 border">
+                            <h6>sample info1</h6>
+                            <p> Temp: 73.72 ℉ </p>
+                            <p> Wind: 9.53 MPH</p>
+                            <p> Humidity: 66% </p>
+                        </div>
+                        <div class="forecast-container col border">
+                            <h6>sample info2</h6>
+                            <p> Temp: 73.72 ℉ </p>
+                            <p> Wind: 9.53 MPH</p>
+                            <p> Humidity: 66% </p>
+                        </div>
+                        <div class="forecast-container col border">
+                            <h6>sample info3</h6>
+                            <p> Temp: 73.72 ℉ </p>
+                            <p> Wind: 9.53 MPH</p>
+                            <p> Humidity: 66% </p>
+                        </div>
+                        <div class="forecast-container col border">
+                            <h6>sample info4</h6>
+                            <p> Temp: 73.72 ℉ </p>
+                            <p> Wind: 9.53 MPH</p>
+                            <p> Humidity: 66% </p>
+                        </div>
+                        <div class="forecast-container col border">
+                            <h6>sample info5</h6>
+                            <p> Temp: 73.72 ℉ </p>
+                            <p> Wind: 9.53 MPH</p>
+                            <p> Humidity: 66% </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
     </main>
     <script src="./assets/script.js"></script>
 </body>

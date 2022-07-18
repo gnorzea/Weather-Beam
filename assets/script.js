@@ -1,15 +1,18 @@
-var form = document.querySelector(".search-box form");
+var form = document.querySelector(".weather-search");
+var input = document.querySelector(".search");
 
-var getSearch = function (search) {
+
+var searchedCity = document.querySelector(".weather-search-term");
+var cityContainer= document.querySelector(".weather-container");
+
+
+
 
     form.addEventListener("submit", function (event) {
         event.preventDefault();
         var inputValue = event.target.value
 
-        var apiUrl = "https://api.openweathermap.org/data/2.5/onecall?q=" + inputValue + "&appid=" + apiKey;
-
-        var apiKey = "120ea77b2ce7d183b863517d294c0544"
-
+        
         fetch(apiUrl).then(function (response) {
 
             response.json().then(function (data) {
@@ -21,6 +24,11 @@ var getSearch = function (search) {
                 });
         })
     })
-};
 
-getSearch("boynton beach");
+var apiKey = "d91f911bcf2c0f925fb6535547a5ddc9"
+var apiUrl = "https://api.openweathermap.org/geo/1.0/direct?q=" + "Miami" + "&appid=" + apiKey;
+fetch(apiUrl).then(function (response) {
+    response.json().then(function (data) {
+        console.log(data);
+    })
+})

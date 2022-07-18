@@ -37,3 +37,7 @@ input {
   .forecast-box {
       margin: 10px;
   }
+
+  .hide {
+    display: none;
+  }
